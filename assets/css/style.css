@@ -824,6 +824,26 @@ max-width: 55rem;
   min-height: 22.5rem;
 }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .6}
+  to {opacity: 1}
+}
+
+/* Blog styles */
+.blog .top-text p{
+  text-align: center;
+}
+
+.blog .top-text i{
+  padding: 2rem;
+  font-size: 2.5rem;
+}
+
 @media screen and (max-width: 1010px) {
   .highlights {
     flex-direction: column;
@@ -1098,26 +1118,11 @@ max-width: 55rem;
   .self-study .self-study-qualifications .self-study-embedded-list:last-of-type {
     margin-bottom: 1.5rem;
   }
-}
 
-.fade {
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@keyframes fade {
-  from {opacity: .6}
-  to {opacity: 1}
-}
-
-/* Blog styles */
-.blog .top-text p{
-  text-align: center;
-}
-
-.blog .top-text i{
-  padding: 2rem;
-  font-size: 2.5rem;
+  .blog .top-text i{
+    padding: 0.5rem;
+    font-size: 1.5rem;
+  }
 }
 
 /* Dark Mode stylings */
