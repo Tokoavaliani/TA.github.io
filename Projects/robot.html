@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tornike Avaliani</title>
+
+    <!-- Web page CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Favicons -->
+    <script src="https://kit.fontawesome.com/d4a6bd0290.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav>
+      <a href="../index.html" class='logo'>
+        <h1>
+          <span class='tv'>T</span><span class="slash">/</span><span class='jab'>A</span>
+        </h1>
+      </a>
+
+      <ul>
+        <!--
+          <li class='nav-item'>
+          <div class="theme-switch">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+              <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+              <ion-icon name="moon-outline" class="moon"></ion-icon>
+              <div class="switcher"></div>
+            </label>
+          </div>
+          </li>
+        -->
+        <li class='nav-item'>
+          <i class="fa-solid fa-moon" id="theme-nav-button"></i>
+        </li>
+        <li class='nav-item'>
+          <a href="../index.html" class='standard nav-link' id='nav-link'>Home</a>
+        </li>
+        <li class='nav-item'>
+          <a href="../about.html" class='standard nav-link' id='nav-link'>About</a>
+        </li>
+        <li class='nav-item'>
+          <a href="../blog.html" class='standard nav-link' id='nav-link'>Blog</a>
+        </li>
+        <li class='nav-item'>
+          <a href="../projects.html" class='standard nav-link' id='nav-link'>Projects</a>
+        </li>
+        <li class='nav-item'>
+          <a href="mailto:tokoavaliani42@gmail.com" class='nav-link' id='nav-link'>Contact</a>
+        </li>
+      </ul>
+
+      <div class="nav-accessory">
+        <div class="theme-button">
+          <i class="fa-solid fa-moon" id="theme-button"></i>
+        </div>
+
+      <div class="hamburger" id='hamburger'>
+        <span class='bar'></span>
+        <span class='bar'></span>
+        <span class='bar'></span>
+      </div>
+    </div>
+    </nav>
+    <!-- Dark/light theme switcher -->
+
+    <!-- bars -->
+
+    <!-- About section -->
+    <section class='about project-section'>
+      <div class="top-text">
+        <h2>IDP - Autonomous Robot</h2>
+        <i>February - March 2023 - Coursework</i>
+      </div>
+      <div class="project-description">
+        <h3>Objective</h3>
+        <p>
+          Work as a team to design, manufacture and program an autonomous robot to meet the following criteria:
+        </p>
+        <ul>
+          <li>Start in a controlled manner (e.g using a button)</li>
+          <li>Traverse a ramp and tunnel</li>
+          <li>Transfer blocks from junctions to their corresponding box</li>
+          <li>Correctly identify and indicate (via LED) blocks by colour</li>
+          <li>The robot must be contrusted robustly and safely (no exposed wires or parts glued together)</li>
+        </ul>
+        <p>
+          The winning design is the one which accrues the most points. Points are awarded for the following:
+        </p>
+        <ul>
+          <li>Entering the area from the start box</li>
+          <li>Successfully traversing the ramp and the tunnel</li>
+          <li>Returning a block from the junctions</li>
+          <li>Correctly identifying the block by colour</li>
+          <li>Returning to the start box before 5 minutes have elapsed</li>
+        </ul>
+      </div>
+      <div class="project-slideshow-container">
+        <div class="project-slideshow">
+          <div class="visual-container">
+            <div class="fade visual">
+              <img src="../assets/images/IMG_4385.jpg">
+            </div>
+            <div class="fade visual">
+              <iframe src="https://youtube.com/embed/33eCCn5jYRU" frameborder="0" autoplay="1" mute="1" height="100%" width="100%" allowfullscreen=""></iframe>
+              <!--<video src="../assets/images/IMG_4369.MOV"></video>-->
+            </div>
+            <div class="fade visual">
+              <img src="../assets/images/IMG_4386.jpg">
+            </div>
+            <i class="prev fa-solid fa-circle-left" onclick="changeSlide(-1)"></i>
+            <i class="next fa-solid fa-circle-right" onclick="changeSlide(1)"></i>
+          </div>
+          <div class="slideshow-dots">
+            <span class="dot" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-text">
+        <h3>Comments</h3>
+        <p>
+          I was part of the software subteam, programming a modified Arduino circuit board in C++ to control the autonomous robot. We took a
+          modular approach, breaking tasks into smaller sub-tasks and integrating them into a cohesive system. It was important to using logical
+          reasoning and algorithmic thinking to create: a line-following function for arena navigation, a 'block acquisition' function
+          for collecting blocks, and a 'block return' function for placing them into the correct corresponding box. I thought to implement modulo counting 
+          logic to track the robot's location in the arena at any given moment.
+          <br>
+          <br>
+          We developed our management skills by deliberate planning our project timeline with a Gantt chart, setting clear objectives for testing,
+          and making every effort to communication effectively and clearly between interdependent subteams - mechanical, electrical and software in all. 
+          Our team's strength shone through as we quickly developed a working prototype within the first three days, allowing us to concentrate 
+          on testing, debugging, and refiningg our robot. This accelerated our progress enormously.
+          <br>
+          <br>
+          While we achieved success in testing, our final assessment didn't meet our target. I attribute this to practicing on a dummy arena and not that 
+          which would be used in our final test. This taught me the significance of using the actual test arena, even in testing, especially considering 
+          we knew our sensors were especially sensitive to their operating conditions.
+          <br>
+          <br>
+          This project was so much fun and certainly my favourite work since joining Cambridge! It has driven me to look more
+          closely at robotics and perhaps join the <a href="https://www.curobotics.co.uk/" target="_blank">CU Robotics Society</a>.
+        </p>
+      </div>
+      <div class="scroll-container">
+        <div class="scroll-up-container">
+          <i class="fa-solid fa-angles-up scroll-up" id="scroll-up" onclick="scrollUp()"></i>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Scroll to top button -->
+
+    <!-- Web page script -->
+    <script src='../assets/javascript/app1.js'></script>
+
+    <!-- Ion icons CDN -->
+    <script type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+
+  </body>
+</html>

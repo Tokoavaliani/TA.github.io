@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tornike Avaliani</title>
+
+    <!-- Web page CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <!-- Favicons -->
+    <script src="https://kit.fontawesome.com/d4a6bd0290.js" crossorigin="anonymous"></script>
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+  </head>
+  <body>
+
+    <!-- Navbar -->
+    <nav>
+      <a href="../index.html" class='logo'>
+        <h1>
+          <span class='tv'>T</span><span class="slash">/</span><span class='jab'>A</span>
+        </h1>
+      </a>
+
+      <ul>
+        <!--
+          <li class='nav-item'>
+          <div class="theme-switch">
+            <input type="checkbox" class="checkbox" id="checkbox">
+            <label for="checkbox" class="label">
+              <ion-icon name="partly-sunny-outline" class="sun"></ion-icon>
+              <ion-icon name="moon-outline" class="moon"></ion-icon>
+              <div class="switcher"></div>
+            </label>
+          </div>
+          </li>
+        -->
+        <li class='nav-item'>
+          <i class="fa-solid fa-moon" id="theme-nav-button"></i>
+        </li>
+        <li class='nav-item'>
+          <a href="../index.html" class='standard nav-link' id='nav-link'>Home</a>
+        </li>
+        <li class='nav-item'>
+          <a href="../about.html" class='standard nav-link' id='nav-link'>About</a>
+        </li>
+        <li class='nav-item'>
+          <a href="../blog.html" class='standard nav-link' id='nav-link'>Blog</a>
+        </li>
+        <li class='nav-item'>
+          <a href="../projects.html" class='standard nav-link' id='nav-link'>Projects</a>
+        </li>
+        <li class='nav-item'>
+          <a href="mailto:tokoavaliani42@gmail.com" class='nav-link' id='nav-link'>Contact</a>
+        </li>
+      </ul>
+
+      <div class="nav-accessory">
+        <div class="theme-button">
+          <i class="fa-solid fa-moon" id="theme-button"></i>
+        </div>
+
+      <div class="hamburger" id='hamburger'>
+        <span class='bar'></span>
+        <span class='bar'></span>
+        <span class='bar'></span>
+      </div>
+    </div>
+    </nav>
+    <!-- Dark/light theme switcher -->
+
+    <!-- bars -->
+
+    <!-- About section -->
+    <section class='about project-section'>
+      <div class="top-text">
+        <h2>IEP - Electronic Level</h2>
+        <i>October 2021 - March 2022 - Coursework</i>
+      </div>
+      <div class="project-description">
+        <h3>Objective</h3>
+        <p>
+          Design an electronic level with visual indicator from basic electronic components:
+        </p>
+        <ul>
+          <li>5V power supply</li>
+          <li>MEMs accelerometer</li>
+          <li>Op-Amp</li>
+          <li>Comparator</li>
+          <li>LEDs</li>
+        </ul>
+      </div>
+      <div class="project-slideshow-container">
+        <div class="project-slideshow">
+          <div class="visual-container">
+            <div class='single-video'>
+              <iframe src="https://youtube.com/embed/HIDArrAtTYE" frameborder="0" autoplay="1" mute="1" allowfullscreen="" width="100%" height="100%"></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-text">
+        <h3>Comments</h3>
+        <p>
+          I found this project to be one of the most difficult I have tackled since coming to Cambridge.
+          I didn't especially enjoy electrical physics/engineering at school and this was my first time constructing
+          a non-trivial circuit and my first time using quite sophisticated components.
+          <br>
+          <br>
+          There were a number of challenges I faced in the course of this project. One somewhat unexpected
+          challenge was the need to be efficient with the use of space on the breadboard. There were many
+          constituent circuits which cascaded to produce the level. Each of these had to be well organised
+          in order to prevent overcrowding of components and connecting cables.
+          <br>
+          Another challenge I faced was using documentation in order to use unfamiliar components without
+          issue.
+        </p>
+      </div>
+      <div class="scroll-container">
+        <div class="scroll-up-container">
+          <i class="fa-solid fa-angles-up scroll-up" id="scroll-up" onclick="scrollUp()"></i>
+        </div>
+    </div>
+    </section>
+
+
+    <!-- Scroll to top button -->
+
+    <!-- Web page script -->
+    <script src='../assets/javascript/app1.js'></script>
+
+    <!-- Ion icons CDN -->
+    <script type='module' src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+
+  </body>
+</html>
