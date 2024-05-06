@@ -11,6 +11,39 @@ const navCheckbox = document.querySelector("#theme-nav-button");
 try {
   const blogNew = document.querySelector("#blogNew");
   const blogAll = document.querySelector("#blogAll");
+
+  (function () {
+    if (localStorage.getItem("blog") === "blogNew") {
+      blogNew.classList.add("active");
+      blogAll.classList.remove("active");
+    } else {
+      blogAll.classList.add("active");
+      blogNew.classList.remove("active");
+    }
+  }) ();
+
+  // Blog responsiveness
+
+  blogNew.addEventListener("click", () => {
+    console.log("New clicked");
+    if (blogNew.classList.contains("active")) {
+    } else { 
+      blogNew.classList.add("active");
+      blogAll.classList.remove("active");
+      localStorage.setItem("blog", "blogNew");
+    }
+  })
+
+  blogAll.addEventListener("click", () => {
+    console.log("All clicked");
+    if (blogAll.classList.contains("active")) {
+      } else {
+      blogAll.classList.add("active");
+      blogNew.classList.remove("active");
+      localStorage.setItem("blog", "blogAll");
+    }
+  })
+  
 } catch(error) {
   console.log("No Blog on this page");
 }
@@ -44,38 +77,6 @@ const transitionManager = () => {
     setTheme("light");
   }
 }) ();
-
-(function () {
-  if (localStorage.getItem("blog") === "blogNew") {
-    blogNew.classList.add("active");
-    blogAll.classList.remove("active");
-  } else {
-    blogAll.classList.add("active");
-    blogNew.classList.remove("active");
-  }
-}) ();
-
-// Blog responsiveness
-
-blogNew.addEventListener("click", () => {
-  console.log("New clicked");
-  if (blogNew.classList.contains("active")) {
-  } else { 
-    blogNew.classList.add("active");
-    blogAll.classList.remove("active");
-    localStorage.setItem("blog", "blogNew");
-  }
-})
-
-blogAll.addEventListener("click", () => {
-  console.log("All clicked");
-  if (blogAll.classList.contains("active")) {
-    } else {
-    blogAll.classList.add("active");
-    blogNew.classList.remove("active");
-    localStorage.setItem("blog", "blogAll");
-  }
-})
 
 // Hamburger menu listener
 
