@@ -8,6 +8,13 @@ const hamburger = document.querySelector("#hamburger");
 const navMenu = document.querySelector("ul");
 const checkbox = document.querySelector("#theme-button");
 const navCheckbox = document.querySelector("#theme-nav-button");
+try {
+  const blogNew = document.querySelector("#blogNew");
+  const blogAll = document.querySelector("#blogAll");
+} catch(error) {
+  console.log("No Blog on this page");
+}
+
 
 // Set transition properties for theme switching
 const transitionManager = () => {
@@ -31,13 +38,44 @@ const transitionManager = () => {
 // Call this every time the website is reloaded to ensure continuity across the website
 
 (function () {
-  console.log(localStorage.getItem("theme"));
   if (localStorage.getItem("theme") === "dark") {
     setTheme("dark");
   } else {
     setTheme("light");
   }
 }) ();
+
+(function () {
+  if (localStorage.getItem("blog") === "blogNew") {
+    blogNew.classList.add("active");
+    blogAll.classList.remove("active");
+  } else {
+    blogAll.classList.add("active");
+    blogNew.classList.remove("active");
+  }
+}) ();
+
+// Blog responsiveness
+
+blogNew.addEventListener("click", () => {
+  console.log("New clicked");
+  if (blogNew.classList.contains("active")) {
+  } else { 
+    blogNew.classList.add("active");
+    blogAll.classList.remove("active");
+    localStorage.setItem("blog", "blogNew");
+  }
+})
+
+blogAll.addEventListener("click", () => {
+  console.log("All clicked");
+  if (blogAll.classList.contains("active")) {
+    } else {
+    blogAll.classList.add("active");
+    blogNew.classList.remove("active");
+    localStorage.setItem("blog", "blogAll");
+  }
+})
 
 // Hamburger menu listener
 
@@ -77,6 +115,8 @@ navCheckbox.addEventListener("click", () => {
   window.getComputedStyle(transitions.style).opacity;
   transitions.enable();
 })
+
+
 
 // hamburger theme switch listener
 
@@ -160,3 +200,5 @@ function toggleTheme(){
     setTheme("dark");
   }
 }
+
+// Toggles blog category based on current category
