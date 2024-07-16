@@ -11,7 +11,7 @@
   --secondary-color: #95C8AE;
   --dark-backgroud-color: #23252f;
   --dark-color: #F8F8F2;
-  --font-standard: 1.2rem;
+  --font-standard: 1.3rem;
   --font-subheading: 1.75rem;
   --transition: 0.25s ease-in;
   --textured-background-color: #F6F6F6;
@@ -377,22 +377,27 @@ nav .nav-accessory .theme-button i:hover {
 
 /* Div Designs */
 
-.hero div {
-  max-width: 70%;
+.hero .photo-container {
+  max-width: 60%;
   min-width: 45%;
 }
 
-.hero .photo-container {
+.hero .intro-text {
+  max-width: 60%;
+  min-width: 45%;
+}
+
+.hero .photo-container .photo {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
 }
 
 /* Image Design*/
 .hero .photo-container .photo img {
   border: 0.2rem solid #000000;
   border-radius: 50%;
-  width: 100%;
+  width: 80%;
 }
 
 /* About section style */
@@ -407,8 +412,8 @@ max-width: 55rem;
 
 .about p {
   font-weight: 400;
-  line-height: 1.5rem;
-  font-size: var(--font-standard); /* 1.1rem */
+  line-height: 1.75rem;
+  font-size: var(--font-standard);
   vertical-align: baseline;
 }
 
@@ -455,12 +460,12 @@ max-width: 55rem;
 }
 
 .container ul {
-  margin-top: 1rem;
+  margin-top: 0.5rem;
   display: block;
 }
 
 .container li {
-  padding: 0 0 0 0.5rem;
+  padding: 0.75rem 0 0 0.5rem;
 }
 
 .container i {
@@ -547,17 +552,18 @@ max-width: 55rem;
 .experiences .work-description .company{
   font-size: var(--font-standard);
   line-height: 1.75rem;
+  font-weight: 700;
 }
 
 .experiences .work-description .company-description {
   font-style: italic;
-  font-size: 1.0rem;
-  line-height: 1.25rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .experiences .work-description .date {
-  font-size: 0.85rem;
-  line-height: 1.0rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 /* Company description styling */
@@ -572,6 +578,7 @@ max-width: 55rem;
 .company-tasks li {
   list-style-type: square;
   list-style-position: outside;
+  margin: 0.25rem 0 0 0;
 }
 
 /* Text at the bottom section of page */
@@ -665,6 +672,11 @@ max-width: 55rem;
 .about .coursework-container .coursework-instance:hover {
   transform: scale(1.01);
 }
+
+.about .coursework-container a:hover {
+  color: #000000;
+}
+
 
 .about .coursework-container .coursework-instance .slide-container {
   padding: 0 0 1.5rem 0;
@@ -1103,12 +1115,12 @@ max-width: 55rem;
   }
 
   .hero .intro-text {
-    max-width: 90%;
+    max-width: 100%;
     text-align: center;
   }
 
   .hero .photo-container {
-    max-width: 70%;
+    max-width: 60%;
   }
 
   .about {
@@ -1134,6 +1146,10 @@ max-width: 55rem;
 }
 
 @media screen and (max-width: 600px) {
+  .hero .photo-container {
+    max-width: 70%;
+  }
+
   nav {
     padding: 0.5rem 0.5rem;
   }
