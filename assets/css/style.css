@@ -495,7 +495,6 @@ max-width: 55rem;
 
 .highlights .container .interests li {
   line-height: 1.5rem;
-  padding-bottom: 1rem;
 }
 
 /* Contains banners/images from IET and Cambridge */
@@ -1050,10 +1049,6 @@ max-width: 55rem;
 }
 
 @media screen and (max-width: 1010px) {
-  .highlights {
-    flex-direction: column;
-  }
-
   .highlights .container {
     width: 100%;
     margin: 1rem auto;
@@ -1143,6 +1138,13 @@ max-width: 55rem;
   .img-container img {
     padding: 0 5rem;
   }
+}
+
+@media screen and (max-width: 700px) {
+  .highlights {
+    flex-direction: column;
+  }
+  
 }
 
 @media screen and (max-width: 600px) {
