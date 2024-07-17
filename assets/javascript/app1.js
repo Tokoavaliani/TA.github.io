@@ -73,6 +73,8 @@ const transitionManager = () => {
 (function () {
   if (localStorage.getItem("theme") === "dark") {
     setTheme("dark");
+     navCheckbox.classList.replace("fa-moon", "fa-bolt-lightning");
+    checkbox.classList.replace("fa-moon", "fa-bolt-lightning");
   } else {
     setTheme("light");
   }
