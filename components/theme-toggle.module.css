@@ -1,0 +1,38 @@
+.toggle {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  z-index: 50;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: var(--bg-soft);
+  color: var(--head);
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.toggle svg {
+  width: 20px;
+  height: 20px;
+}
+
+.sun {
+  display: none;
+}
+
+:global(html.dark) .moon {
+  display: none;
+}
+
+:global(html.dark) .sun {
+  display: block;
+}
