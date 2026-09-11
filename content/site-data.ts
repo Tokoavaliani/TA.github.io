@@ -9,9 +9,11 @@ export type ExperienceEntry = {
 export type ProjectEntry = {
   year: string;
   title: string;
-  href: string;
+  href?: string;
   description: string;
   tags: string[];
+  image?: string;
+  imageAlt?: string;
 };
 
 export type ArchiveEntry = {
@@ -25,7 +27,7 @@ export type ArchiveEntry = {
 export const experience: ExperienceEntry[] = [
   {
     year: "2025",
-    role: "Digital & Technology Services",
+    role: "Digital & Technology Services Intern",
     org: "Alvarez and Marsal",
     description:
       "Evaluated and pitched digital initiatives for a £2B+ revenue client. Delivered data-driven insights using clustering and segmentation, supported with data analysis, feature engineering, and embedding techniques.",
@@ -58,6 +60,16 @@ export const experience: ExperienceEntry[] = [
 ];
 
 export const projects: ProjectEntry[] = [
+  {
+    year: "2025",
+    title: "OAM Inter-Satellite Optical Links",
+    description:
+      "MEng project, in collaboration with Boeing: an end-to-end simulation of orbital angular momentum (OAM) multiplexing for free-space optical inter-satellite links. Modelled Laguerre–Gaussian beam propagation, pointing jitter, and mode crosstalk over 50–250 km, with a coherent sparse-aperture-array receiver and Monte Carlo BER/capacity analysis validated against published results and a spiral-phase-plate bench experiment.",
+    tags: ["Python", "NumPy/SciPy", "Monte Carlo", "Photonics", "Simulation"],
+    image: "/images/oam-lg-beam.png",
+    imageAlt:
+      "Simulated Laguerre–Gaussian OAM mode: ring-shaped intensity profile alongside its spiral phase.",
+  },
   {
     year: "2025",
     title: "Sudoku Solver",
@@ -93,10 +105,10 @@ export const projects: ProjectEntry[] = [
   {
     year: "2022",
     title: "Meal Booking Bot",
-    href: "#",
+    href: "https://github.com/Tokoavaliani/meal-booking-bot",
     description:
       "An automated meal-booking bot to guarantee me a place at in demand college events.",
-    tags: ["AWS Lambda", "Automation", "Concurrency"],
+    tags: ["Python", "Automation", "Multiprocessing"],
   },
 ];
 
@@ -148,8 +160,8 @@ export const archive: ArchiveEntry[] = [
   {
     year: "2022",
     title: "Meal Booking Bot",
-    tech: "AWS Lambda · Selenium · Concurrency",
-    href: "#",
+    tech: "Python · requests · Multiprocessing",
+    href: "https://github.com/Tokoavaliani/meal-booking-bot",
     linkLabel: "Code ↗",
   },
   { year: "2022", title: "Mars Lander Simulator", tech: "C++ · Control Theory" },

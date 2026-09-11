@@ -198,6 +198,21 @@ a.row:hover .arrow {
   padding: 5px 11px;
 }
 
+.figure {
+  margin-top: 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 .archiveLink {
   display: inline-block;
   margin-top: 12px;

@@ -111,28 +111,47 @@ export default function HomePage() {
           <h2 className={styles.secLabel} data-n="03">
             Projects
           </h2>
-          {projects.map((project) => (
-            <a
-              key={project.title}
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.row}
-            >
-              <div className={styles.when}>{project.year}</div>
-              <div>
-                <h3>
-                  {project.title} <span className={styles.arrow}>↗</span>
-                </h3>
-                <p>{project.description}</p>
-                <div className={styles.tags}>
-                  {project.tags.map((tag) => (
-                    <span key={tag}>{tag}</span>
-                  ))}
+          {projects.map((project) => {
+            const inner = (
+              <>
+                <div className={styles.when}>{project.year}</div>
+                <div>
+                  <h3>
+                    {project.title}
+                    {project.href && <span className={styles.arrow}> ↗</span>}
+                  </h3>
+                  <p>{project.description}</p>
+                  <div className={styles.tags}>
+                    {project.tags.map((tag) => (
+                      <span key={tag}>{tag}</span>
+                    ))}
+                  </div>
+                  {project.image && (
+                    <figure className={styles.figure}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={project.image} alt={project.imageAlt ?? ""} />
+                    </figure>
+                  )}
                 </div>
+              </>
+            );
+
+            return project.href ? (
+              <a
+                key={project.title}
+                href={project.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.row}
+              >
+                {inner}
+              </a>
+            ) : (
+              <div key={project.title} className={styles.row}>
+                {inner}
               </div>
-            </a>
-          ))}
+            );
+          })}
           <Link href="/archive" className={styles.archiveLink}>
             View the full archive →
           </Link>
