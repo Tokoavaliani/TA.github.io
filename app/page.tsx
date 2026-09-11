@@ -8,7 +8,15 @@ export default function HomePage() {
   return (
     <div className={styles.shell}>
       <aside className={styles.side}>
-        <div>
+        <div className={styles.identity}>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            className={styles.avatar}
+            src="/images/profile.jpg"
+            alt="Tornike Avaliani"
+            width={132}
+            height={132}
+          />
           <h1 className={styles.name}>Tornike Avaliani</h1>
           <p className={styles.role}>Engineering, University of Cambridge</p>
           <SectionNav />

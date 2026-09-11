@@ -16,12 +16,26 @@
   padding: 96px 0 72px;
 }
 
+.identity {
+  text-align: center;
+}
+
+.avatar {
+  display: block;
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 14%;
+  margin: 0 auto 28px;
+  border: 1px solid var(--line);
+}
+
 .name {
   font-size: clamp(38px, 5.2vw, 52px);
   line-height: 1.05;
   letter-spacing: -0.03em;
   font-weight: 800;
-  margin-left: -12px;
 }
 
 .role {
@@ -35,6 +49,7 @@
   margin-top: 32px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 22px;
 }
 

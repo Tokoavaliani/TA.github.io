@@ -15,6 +15,7 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://ta-github-io.vercel.app"),
   title: {
     default: "Tornike Avaliani — Engineering undergraduate, Cambridge",
     template: "%s — Tornike Avaliani",
@@ -26,6 +27,22 @@ export const metadata: Metadata = {
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/favicon.ico" },
     ],
+  },
+  openGraph: {
+    type: "website",
+    siteName: "Tornike Avaliani",
+    title: "Tornike Avaliani — Engineering, University of Cambridge",
+    description:
+      "Portfolio of Tornike Avaliani — engineering graduate of the University of Cambridge.",
+    url: "/",
+    images: [{ url: "/og.jpg", width: 1200, height: 630, alt: "Tornike Avaliani — portfolio" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Tornike Avaliani — Engineering, University of Cambridge",
+    description:
+      "Portfolio of Tornike Avaliani — engineering graduate of the University of Cambridge.",
+    images: ["/og.jpg"],
   },
 };
 
