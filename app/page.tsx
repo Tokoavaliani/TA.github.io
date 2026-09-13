@@ -14,8 +14,8 @@ export default function HomePage() {
             className={styles.avatar}
             src="/images/profile.jpg"
             alt="Tornike Avaliani"
-            width={132}
-            height={132}
+            width={198}
+            height={198}
           />
           <h1 className={styles.name}>Tornike Avaliani</h1>
           <p className={styles.role}>Engineering, University of Cambridge</p>

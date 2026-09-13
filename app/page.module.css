@@ -22,8 +22,8 @@
 
 .avatar {
   display: block;
-  width: 132px;
-  height: 132px;
+  width: 198px;
+  height: 198px;
   border-radius: 50%;
   object-fit: cover;
   object-position: 50% 14%;
