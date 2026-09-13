@@ -21,12 +21,11 @@
 }
 
 .avatar {
-  display: block;
+  position: relative;
   width: 198px;
   height: 198px;
   border-radius: 50%;
-  object-fit: cover;
-  object-position: 50% 14%;
+  overflow: hidden;
   margin: 0 auto 28px;
   border: 1px solid var(--line);
 }

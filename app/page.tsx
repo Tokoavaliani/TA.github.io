@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { DownloadIcon, GithubIcon, LinkedinIcon, MailIcon } from "@/components/icons";
 import { SectionNav } from "@/components/section-nav";
@@ -9,14 +10,17 @@ export default function HomePage() {
     <div className={styles.shell}>
       <aside className={styles.side}>
         <div className={styles.identity}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            className={styles.avatar}
-            src="/images/profile.jpg"
-            alt="Tornike Avaliani"
-            width={198}
-            height={198}
-          />
+          <div className={styles.avatar}>
+            <Image
+              src="/images/headshot.jpg"
+              alt="Tornike Avaliani"
+              fill
+              sizes="200px"
+              quality={90}
+              priority
+              style={{ objectFit: "cover", objectPosition: "50% 14%" }}
+            />
+          </div>
           <h1 className={styles.name}>Tornike Avaliani</h1>
           <p className={styles.role}>Engineering, University of Cambridge</p>
           <SectionNav />
