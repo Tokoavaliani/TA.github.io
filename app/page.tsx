@@ -12,13 +12,13 @@ export default function HomePage() {
         <div className={styles.identity}>
           <div className={styles.avatar}>
             <Image
-              src="/images/headshot.jpg"
+              src="/images/avatar.jpg"
               alt="Tornike Avaliani"
               fill
-              sizes="200px"
+              sizes="384px"
               quality={90}
               priority
-              style={{ objectFit: "cover", objectPosition: "50% 14%" }}
+              style={{ objectFit: "cover" }}
             />
           </div>
           <h1 className={styles.name}>Tornike Avaliani</h1>
